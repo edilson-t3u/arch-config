@@ -1,0 +1,188 @@
+/* base */
+
+* {
+    border: none;
+    min-height: 0;
+
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+window#waybar {
+    background: rgba(20, 20, 22, 0.78);
+    color: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.055);
+}
+
+/* tooltip */
+
+tooltip {
+    background: rgba(28, 28, 30, 0.96);
+    color: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+
+    padding: 7px 11px;
+}
+
+/* workspaces */
+
+#workspaces {
+    margin: 5px 7px;
+    padding: 2px 4px;
+
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+#workspaces button {
+    min-width: 22px;
+
+    margin: 0 2px;
+    padding: 0 8px;
+
+    border-radius: 10px;
+
+    background: transparent;
+    color: rgba(255, 255, 255, 0.38);
+
+    transition:
+        background 0.20s ease,
+        color 0.20s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+#workspaces button.active {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* clock */
+
+#clock {
+    margin: 5px 0;
+    padding: 0 18px;
+
+    border-radius: 13px;
+
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    color: rgba(255, 255, 255, 0.96);
+
+    transition: background 0.20s ease;
+}
+
+#clock:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+/* modules */
+
+#backlight,
+#network,
+#pulseaudio,
+#battery,
+#tray,
+#custom-power {
+    margin: 5px 1px;
+    padding: 0 11px;
+
+    border-radius: 12px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    transition:
+        background 0.20s ease,
+        color 0.20s ease;
+}
+
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#tray:hover,
+#custom-power:hover {
+    background: rgba(255, 255, 255, 0.075);
+    color: #ffffff;
+}
+
+/* brightness */
+
+#backlight {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* network */
+
+#network {
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+/* audio */
+
+#pulseaudio {
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+/* battery */
+
+#battery {
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+#battery.warning {
+    color: rgba(255, 196, 80, 0.95);
+}
+
+#battery.critical {
+    color: rgba(255, 90, 90, 0.95);
+}
+
+/* tray */
+
+#tray {
+    margin-left: 4px;
+    margin-right: 4px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* power */
+
+#custom-power {
+    margin-left: 3px;
+    margin-right: 7px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 14px;
+}
+
+#custom-power:hover {
+    background: rgba(255, 255, 255, 0.09);
+    color: #ffffff;
+}

@@ -1,0 +1,123 @@
+{
+    "layer": "top",
+    "position": "top",
+
+    "height": 36,
+    "margin-top": 8,
+    "margin-left": 14,
+    "margin-right": 14,
+
+    "expand-center": true,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "backlight",
+        "network",
+        "pulseaudio",
+        "battery",
+        "tray",
+        "custom/power"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "sort-by-number": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": true,
+        "tooltip-format": "{:%A, %d de %B de %Y}",
+        "on-click": "~/.config/waybar/scripts/calendar.sh"
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "󰃠  {percent}%",
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
+        "scroll-step": 5,
+        "tooltip": true,
+        "tooltip-format": "Brightness: {percent}%"
+    },
+
+    "network": {
+        "format-wifi": "󰖩  {essid}",
+        "format-ethernet": "󰈀  Ethernet",
+        "format-disconnected": "󰖪  Offline",
+        "tooltip": true,
+        "tooltip-format": "Network: {essid}\nSignal: {signalStrength}%",
+        "on-click": "~/.config/waybar/scripts/wifi-menu.sh"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "󰝟  0%",
+        "format-bluetooth-muted": "󰝟  0%",
+        "format-icons": {
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ],
+            "bluetooth": "󰂯"
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 5,
+        "tooltip": true,
+        "tooltip-format": "Volume: {volume}%"
+    },
+
+    "battery": {
+        "format": "{capacity}%  {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-full": "{capacity}% 󰁹",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "tooltip": true,
+        "tooltip-format": "Battery: {capacity}%"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": true,
+        "tooltip-format": "Power",
+        "on-click": "~/.config/waybar/scripts/power-menu.sh"
+    }
+}
